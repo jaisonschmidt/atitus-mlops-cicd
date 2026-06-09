@@ -1,0 +1,4 @@
+name: MLOps Pipeline
+on:
+  push:
+    branches: [ "main" ]
