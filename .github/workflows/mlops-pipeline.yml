@@ -19,3 +19,15 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: 🔍 Validar dados
+      run: python src/validate_data.py
+
+    - name: 🧪 Executar testes
+      run: pytest
+
+    - name: 🧮 Treinar modelo
+      run: python src/train.py
+
+    - name: 📊 Avaliar modelo
+      run: python src/evaluate.py
