@@ -31,3 +31,11 @@ jobs:
 
     - name: 📊 Avaliar modelo
       run: python src/evaluate.py
+    
+    - name: 📦 Publicar artefatos
+      uses: actions/upload-artifact@v4
+      with:
+        name: modelo-treinado
+        path: |
+          model.joblib
+          metrics.json
